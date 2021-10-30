@@ -1,0 +1,9 @@
+# Build reactjs app with production mode
+npm run build
+
+# export reactjs app 
+npm run export
+
+# Start deploying via firebase
+firebase use tinspham-209
+firebase deploy

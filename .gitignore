@@ -1,0 +1,9 @@
+node_modules
+.next
+dist
+.vercel
+.env
+out
+.firebaserc
+firebase.json
+.firebase
