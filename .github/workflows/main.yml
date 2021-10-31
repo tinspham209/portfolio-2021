@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: 
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Build
+        run: |
+          npm install
+          npm run build
+          npm run export
+      - name: Firebase Deploy
+        run: |
+          sudo npm install -g firebase-tools
+          firebase deploy --token 1//0eyyrmrznuU8ICgYIARAAGA4SNwF-L9IrSXyxnQ3tm47eVSxWFQubDdLdKA1z1IhBUqgPm3MP_xsqkwkqY0vDk1Qm1KhoCe2HR7A
+          
