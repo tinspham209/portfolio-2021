@@ -7,26 +7,19 @@ on:
     branches:
       - master
 jobs:
-  build:
+  build_and_deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repo
       - uses: actions/checkout@master
       - name: install dependencies
-        run: npm install
+        run: |
+          npm install
+          npm install -g firebase-tools
       - name: Export
-        run: npm run build && npm run export
-      - name: Deploy
-        run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
-
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repo
-      - uses: actions/checkout@master
-      - name: install dependencies
-        run: npm install -g firebase-tools
+        run: |
+        npm run build
+        npm run export
       - name: Deploy
         run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
