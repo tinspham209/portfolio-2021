@@ -21,6 +21,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repo
+      - uses: actions/checkout@master
       - name: Install dependencies
       - run: npm install -g firebase-tools
       - name: Deploy
