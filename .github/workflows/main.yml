@@ -22,7 +22,7 @@ jobs:
         id: slack
         uses: slackapi/slack-github-action@v1.16.0
         with:
-          payload: '{"blocks":[{"type":"section","text":{"type":"mrkdwn","text":"You have a new request action: "}},{"type":"section","fields":[{"type":"mrkdwn","text":"*Action:* Deploy to PROD"},{"type":"mrkdwn","text":"*Status:* SUCCEEDED!"}]}]}'
+          payload: '{"blocks":[{"type":"section","text":{"type":"mrkdwn","text":"You have a new request action: "}},{"type":"section","fields":[{"type":"mrkdwn","text":"*Action:* Deploy to PROD"},{"type":"mrkdwn","text":"*Status:* SUCCEEDED!"},{"type":"mrkdwn","text":"*Project:* portfolio-2021"}]}]}'
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
