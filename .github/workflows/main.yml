@@ -18,3 +18,5 @@ jobs:
         run: npm run build && npm run export
       - name: Deploy
         run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
+      - name: Slack notification
+        run: curl -X POST -H 'Content-type: application/json' --data '{"text":"Deploy Webapp to prod. SUCCEEDED!"}' ${{ secrets.SLACK_CI_WEBHOOK_KEY }}
