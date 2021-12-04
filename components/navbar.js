@@ -1,11 +1,20 @@
 import Logo from './logo'
+import NextLink from 'next/link'
 import {
   Container,
   Box,
+  Link,
+  // Stack,
   Heading,
   Flex,
+  Menu,
+  MenuItem,
+  MenuList,
+  MenuButton,
+  IconButton,
   useColorModeValue
 } from '@chakra-ui/react'
+import { HamburgerIcon } from '@chakra-ui/icons'
 import ThemeToggleButton from './theme-toggle-button'
 
 // const LinkItem = ({ href, path, _target, children, ...props }) => {
@@ -18,6 +27,7 @@ import ThemeToggleButton from './theme-toggle-button'
 //         bg={active ? 'grassTeal' : undefined}
 //         color={active ? '#202023' : inactiveColor}
 //         _target={_target}
+//         rel="noopener noreferrer"
 //         {...props}
 //       >
 //         {children}
@@ -61,15 +71,15 @@ const Navbar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem href="/works" path={path}>
-            Works
+          <LinkItem href="/css" path={path}>
+            CSS
           </LinkItem>
         </Stack> */}
 
         <Box flex={1} align="right">
           <ThemeToggleButton />
 
-          {/* <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
+          <Box ml={2} display={{ base: 'inline-block' }}>
             <Menu isLazy id="navbar-menu">
               <MenuButton
                 as={IconButton}
@@ -78,19 +88,19 @@ const Navbar = props => {
                 aria-label="Options"
               />
               <MenuList>
-                <NextLink href="/" passHref>
-                  <MenuItem as={Link}>About</MenuItem>
+                <NextLink href="/css" passHref>
+                  <MenuItem as={Link}>CSS Practice</MenuItem>
                 </NextLink>
-                
-                <MenuItem
+
+                {/* <MenuItem
                   as={Link}
                   href="https://github.com/craftzdog/craftzdog-homepage"
                 >
                   View Source
-                </MenuItem>
+                </MenuItem> */}
               </MenuList>
             </Menu>
-          </Box> */}
+          </Box>
         </Box>
       </Container>
     </Box>
