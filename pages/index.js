@@ -21,6 +21,7 @@ import {
   IoLogoFacebook,
   IoMail
 } from 'react-icons/io5'
+import NextLink from 'next/link'
 
 const Home = () => (
   <Layout>
@@ -118,6 +119,17 @@ const Home = () => (
             Datahouse Asia
           </Link>
         </BioSection>
+      </Section>
+
+      <Section delay={0.3}>
+        <Heading as="h3" variant="section-title">
+          Some Fun
+        </Heading>
+        <NextLink href="/css" passHref>
+          <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+            CSS Practice
+          </Button>
+        </NextLink>
       </Section>
 
       <Section delay={0.3}>
