@@ -1,11 +1,33 @@
-import { Container, Heading, SimpleGrid, Divider } from '@chakra-ui/react'
+import {
+  Container,
+  Heading,
+  SimpleGrid,
+  Divider,
+  Box,
+  Link
+} from '@chakra-ui/react'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { CSSGridItem } from '../components/grid-item'
 import thumbAnimatedStairs from '../public/images/css/3d-animated-stairs.png'
+import NextLink from 'next/link'
+import { ChevronRightIcon } from '@chakra-ui/icons'
+
 const CSS = () => (
   <Layout title="css">
     <Container>
+      <Box>
+        <NextLink href="/">
+          <Link>Home</Link>
+        </NextLink>
+        <span>
+          {' '}
+          <ChevronRightIcon />{' '}
+        </span>
+        <Heading display="inline-block" as="h3" fontSize={20} mb={4}>
+          CSS Practice
+        </Heading>
+      </Box>
       <Divider />
 
       <Heading as="h3" fontSize={20} mb={4} mt={4}>
