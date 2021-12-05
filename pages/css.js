@@ -6,12 +6,14 @@ import {
   Box,
   Link
 } from '@chakra-ui/react'
+import NextLink from 'next/link'
 import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { CSSGridItem } from '../components/grid-item'
-import thumbAnimatedStairs from '../public/images/css/3d-animated-stairs.png'
-import NextLink from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+
+import thumbAnimatedStairs from '../public/images/css/3d-animated-stairs.png'
+import thumbGlowingCube from '../public/images/css/3d-glowing-cube.png'
 
 const CSS = () => (
   <Layout title="css">
@@ -41,19 +43,21 @@ const CSS = () => (
             title="3D Animated Stairs"
             thumbnail={thumbAnimatedStairs}
           >
-            3D Animated Stairs with CSS only
+            {/* 3D Animated Stairs with CSS only */}
+            &nbsp;
           </CSSGridItem>
         </Section>
-        {/* <Section>
+        <Section>
           <CSSGridItem
-            id="3d-animated-stairs"
-            title="3D Animated Stairs"
-            thumbnail={thumbAnimatedStairs}
+            id="3d-glowing-cube"
+            title="3D Glowing Cube"
+            thumbnail={thumbGlowingCube}
           >
-            3D Animated Stairs with CSS only
+            {/* 3D Glowing Cube with CSS only */}
+            &nbsp;
           </CSSGridItem>
         </Section>
-
+        {/*
         <Section delay={0.1}>
           <CSSGridItem
             id="3d-animated-stairs"
