@@ -1,6 +1,6 @@
 {
   "name": "tinspham-homepage",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Tins Pham's website",
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
@@ -19,6 +19,8 @@
     "@chakra-ui/react": "^1.6.9",
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
+    "@splinetool/react-spline": "^2.1.0",
+    "@splinetool/runtime": "^0.9.37",
     "framer-motion": "^4.1.17",
     "next": "^11.1.2",
     "react": "^17.0.2",

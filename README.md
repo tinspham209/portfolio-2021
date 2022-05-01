@@ -25,6 +25,14 @@ $PROJECT_ROOT
 └── public
 ```
 
+## Install dependencies:
+
+```
+npm install
+
+npm run dev
+```
+
 ## Deploy:
 
 ```

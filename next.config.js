@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  reactStrictMode: true,
-  images: {
-    loader: 'imgix',
-    path: 'https://noop/'
-  }
+  reactStrictMode: true
+  // images: {
+  // loader: 'imgix'
+  // path: 'https://noop/'
+  // }
 }

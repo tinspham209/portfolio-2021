@@ -42,6 +42,7 @@ const CSS = () => (
             id="3d-animated-stairs"
             title="3D Animated Stairs"
             thumbnail={thumbAnimatedStairs}
+            href="css"
           >
             {/* 3D Animated Stairs with CSS only */}
             &nbsp;
@@ -52,6 +53,7 @@ const CSS = () => (
             id="3d-glowing-cube"
             title="3D Glowing Cube"
             thumbnail={thumbGlowingCube}
+            href="css"
           >
             {/* 3D Glowing Cube with CSS only */}
             &nbsp;

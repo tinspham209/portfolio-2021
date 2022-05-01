@@ -9,7 +9,8 @@ import {
   ListItem,
   Icon,
   useColorModeValue,
-  useMediaQuery
+  useMediaQuery,
+  SimpleGrid
 } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Paragraph from '../components/paragraph'
@@ -25,7 +26,7 @@ import {
 import NextLink from 'next/link'
 
 const Home = () => {
-  const [isMobile] = useMediaQuery(['(max-width: 600px)']);
+  const [isMobile] = useMediaQuery(['(max-width: 600px)'])
   return (
     <Layout>
       <Container>
@@ -88,13 +89,12 @@ const Home = () => {
           </Heading>
           <BioSection>
             <BioYear>09 - 1999</BioYear>
-            {isMobile && <br/>}
+            {isMobile && <br />}
             Born in Danang, Vietnam.
           </BioSection>
           <BioSection>
             <BioYear>07 - 2021</BioYear>
-            {isMobile && <br/>}
-
+            {isMobile && <br />}
             Completed the Bachelor&apos;s program in Software Engineering at Duy
             Tan University
           </BioSection>
@@ -106,8 +106,7 @@ const Home = () => {
           </Heading>
           <BioSection>
             <BioYear>05 - 2021</BioYear>
-            {isMobile && <br/>}
-
+            {isMobile && <br />}
             Tech-Startup at{' '}
             <Link href="https://taptapon.me" target="_blank">
               TapTapOn.Me
@@ -115,8 +114,7 @@ const Home = () => {
           </BioSection>
           <BioSection>
             <BioYear>07 - 2021</BioYear>
-            {isMobile && <br/>}
-
+            {isMobile && <br />}
             Software Engineering Intern at{' '}
             <Link href="https://datahouse.asia" target="_blank">
               Datahouse Asia
@@ -128,7 +126,7 @@ const Home = () => {
           </BioSection>
           <BioSection>
             <BioYear>&nbsp;&nbsp;&nbsp;Present</BioYear>
-            {isMobile && <br/>}
+            {isMobile && <br />}
             Junior Software Engineering at{' '}
             <Link href="https://datahouse.asia" target="_blank">
               Datahouse Asia
@@ -140,11 +138,18 @@ const Home = () => {
           <Heading as="h3" variant="section-title">
             Some Fun
           </Heading>
-          <NextLink href="/css" passHref>
-            <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-              CSS Practice
-            </Button>
-          </NextLink>
+          <SimpleGrid columns={[1, 1, 2]} gap={6}>
+            <NextLink href="/css" passHref>
+              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+                3D CSS
+              </Button>
+            </NextLink>
+            <NextLink href="/spline" passHref>
+              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+                Spline 3D animation
+              </Button>
+            </NextLink>
+          </SimpleGrid>
         </Section>
 
         <Section delay={0.3}>

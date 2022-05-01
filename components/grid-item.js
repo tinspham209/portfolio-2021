@@ -21,27 +21,29 @@ export const GridItem = ({ children, href, title, thumbnail }) => (
   </Box>
 )
 
-export const CSSGridItem = ({ children, id, title, thumbnail }) => (
-  <Box w="100%" textAlign="center">
-    <NextLink href={`/css/${id}`}>
-      <LinkBox cursor="pointer">
-        <Image
-          src={thumbnail}
-          alt={title}
-          className="grid-item-thumbnail"
-          placeholder="blur"
-          loading="lazy"
-        />
-        <LinkOverlay href={`/css/${id}`}>
-          <Text mt={2} fontSize={20}>
-            {title}
-          </Text>
-        </LinkOverlay>
-        <Text fontSize={14}>{children}</Text>
-      </LinkBox>
-    </NextLink>
-  </Box>
-)
+export const CSSGridItem = ({ children, id, title, thumbnail, href }) => {
+  return (
+    <Box w="100%" textAlign="center">
+      <NextLink href={`/${href}/${id}`}>
+        <LinkBox cursor="pointer">
+          <Image
+            src={thumbnail}
+            alt={title}
+            className="grid-item-thumbnail"
+            placeholder="blur"
+            loading="lazy"
+          />
+          <LinkOverlay href={`/${href}/${id}`}>
+            <Text mt={2} fontSize={20}>
+              {title}
+            </Text>
+          </LinkOverlay>
+          <Text fontSize={14}>{children}</Text>
+        </LinkBox>
+      </NextLink>
+    </Box>
+  )
+}
 
 export const GridItemStyle = () => (
   <Global
