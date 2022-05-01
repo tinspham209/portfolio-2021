@@ -4,7 +4,6 @@ import Layout from '../../components/layouts/article'
 import { Title } from '../../components/css'
 import P from '../../components/paragraph'
 import styled from '@emotion/styled'
-import { disableScroll, enableScroll } from './utils'
 import dynamic from 'next/dynamic'
 
 const SplineWrapper = styled.div(props => ({
@@ -30,6 +29,24 @@ const Spline = dynamic(() => import('@splinetool/react-spline'), {
 
 const IslandHouse = () => {
   const [isMobile] = useMediaQuery(['(max-width: 600px)'])
+
+  const disableScroll = () => {
+    document.addEventListener('wheel', preventDefault, {
+      passive: false
+    })
+  }
+
+  const enableScroll = () => {
+    document.removeEventListener('wheel', preventDefault, false)
+  }
+
+  const preventDefault = e => {
+    e = e || window.event
+    if (e.preventDefault) {
+      e.preventDefault()
+    }
+    e.returnValue = false
+  }
 
   return (
     <Layout title="island-house">

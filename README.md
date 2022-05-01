@@ -8,6 +8,7 @@
 - [Chakra UI](https://chakra-ui.com/) - A simple, modular and accessible component library for React
 - [Three.js](https://threejs.org/) - 3D library for JavaScript
 - [Framer Motion](https://www.framer.com/motion/) - An animation library for React
+- [Spline](https://spline.design/) - Designing in 3D and export to React component
 
 <img src="./screenshot.png" height="400px">
 
@@ -32,6 +33,11 @@ npm install
 
 npm run dev
 ```
+
+## Need to READ
+- View image in `localhost`
+  - please hide : `path: 'https://tinspham.dev/'` in file `next.config.js`
+- After that, pre-commit, please show `path` again to view it in website
 
 ## Deploy:
 

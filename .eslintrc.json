@@ -9,6 +9,8 @@
         "varsIgnorePattern": "^_"
       }
     ],
+    "@next/next/no-document-import-in-page": "off",
+
     "react/display-name": 0
   }
 }
