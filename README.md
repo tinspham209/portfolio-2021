@@ -36,8 +36,14 @@ npm run dev
 
 ## Need to READ
 - View image in `localhost`
-  - please hide : `path: 'https://tinspham.dev/'` in file `next.config.js`
-- After that, pre-commit, please show `path` again to view it in website
+  - please hide this object `images` in file `next.config.js`
+```
+  // images: {
+  //   loader: 'imgix'
+  // path: 'https://tinspham.dev/'
+  // },
+```
+- After that, pre-commit, please show object `images` again to view it in website
 
 ## Deploy:
 

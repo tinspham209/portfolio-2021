@@ -1,16 +1,15 @@
 import { Container, Badge, Divider, useMediaQuery } from '@chakra-ui/react'
 import Layout from '../../components/layouts/article'
-// import { Title, CSSImage } from '../../components/css'
 import { Title } from '../../components/css'
 import P from '../../components/paragraph'
 import styled from '@emotion/styled'
 import dynamic from 'next/dynamic'
 
-const SplineWrapper = styled.div(props => ({
-  width: props.isMobile ? '80vw !important' : '485px !important',
-  height: props.isMobile ? '30vh !important' : '100% !important',
+export const SplineWrapper = styled.div(props => ({
+  width: props.isMobile ? '300px !important' : '485px !important',
+  height: props.isMobile ? '300px !important' : '100% !important',
   overflow: 'hidden',
-  backgroundColor: '#A6D5E9',
+  backgroundColor: props.backgroundColor ? props.backgroundColor : '#A6D5E9',
   borderRadius: '8px',
   border: '1px solid #fff',
   boxShadow: '2px 2px 8px rgba(0, 0, 0, 0.2)',
@@ -23,30 +22,30 @@ const SplineWrapper = styled.div(props => ({
   }
 }))
 
-const Spline = dynamic(() => import('@splinetool/react-spline'), {
+export const Spline = dynamic(() => import('@splinetool/react-spline'), {
   ssr: false
 })
 
+export const disableScroll = () => {
+  document.addEventListener('wheel', preventDefault, {
+    passive: false
+  })
+}
+
+export const enableScroll = () => {
+  document.removeEventListener('wheel', preventDefault, false)
+}
+
+export const preventDefault = e => {
+  e = e || window.event
+  if (e.preventDefault) {
+    e.preventDefault()
+  }
+  e.returnValue = false
+}
+
 const IslandHouse = () => {
   const [isMobile] = useMediaQuery(['(max-width: 600px)'])
-
-  const disableScroll = () => {
-    document.addEventListener('wheel', preventDefault, {
-      passive: false
-    })
-  }
-
-  const enableScroll = () => {
-    document.removeEventListener('wheel', preventDefault, false)
-  }
-
-  const preventDefault = e => {
-    e = e || window.event
-    if (e.preventDefault) {
-      e.preventDefault()
-    }
-    e.returnValue = false
-  }
 
   return (
     <Layout title="island-house">
@@ -55,32 +54,23 @@ const IslandHouse = () => {
           Island House <Badge>01-May-2022</Badge>
         </Title>
 
-        {isMobile ? (
-          <P>
-            3D component is not optimized for Mobile View, please switch to
-            Desktop for Fully Experience
-          </P>
-        ) : (
-          <P>Scroll, Drag & Drop, anything you want in this Island</P>
-        )}
+        <P>Scroll, Drag & Drop, anything you want in this Island</P>
+        {isMobile && <P>Switch to Desktop view for best experience</P>}
         <Divider mt={4} mb={4} />
 
-        {isMobile ? (
-          <SplineWrapper isMobile={isMobile}></SplineWrapper>
-        ) : (
-          <SplineWrapper
-            onMouseEnter={disableScroll}
-            onMouseLeave={enableScroll}
-            isMobile={isMobile}
-          >
-            <Spline
-              scene="https://prod.spline.design/UekhSiujr09iCtzb/scene.spline"
-              onLoad={spline => {
-                spline.setZoom(0.5)
-              }}
-            />
-          </SplineWrapper>
-        )}
+        <SplineWrapper
+          onMouseEnter={disableScroll}
+          onMouseLeave={enableScroll}
+          isMobile={isMobile}
+          backgroundColor="#A6D5E9"
+        >
+          <Spline
+            scene="https://prod.spline.design/UekhSiujr09iCtzb/scene.spline"
+            onLoad={spline => {
+              spline.setZoom(0.5)
+            }}
+          />
+        </SplineWrapper>
 
         <Divider mt={4} mb={4} />
       </Container>

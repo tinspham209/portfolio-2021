@@ -125,9 +125,9 @@ const Home = () => {
             &nbsp;
           </BioSection>
           <BioSection>
-            <BioYear>&nbsp;&nbsp;&nbsp;Present</BioYear>
+            <BioYear>&nbsp;&nbsp;&nbsp;&nbsp;to now</BioYear>
             {isMobile && <br />}
-            Junior Software Engineering at{' '}
+            Software Engineering at {isMobile && <br />}
             <Link href="https://datahouse.asia" target="_blank">
               Datahouse Asia
             </Link>
@@ -136,17 +136,17 @@ const Home = () => {
 
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
-            Some Fun
+            Practices
           </Heading>
           <SimpleGrid columns={[1, 1, 2]} gap={6}>
             <NextLink href="/css" passHref>
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-                3D CSS
+                3D w CSS
               </Button>
             </NextLink>
             <NextLink href="/spline" passHref>
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-                Spline 3D animation
+                3D w ThreeJS
               </Button>
             </NextLink>
           </SimpleGrid>
