@@ -39,6 +39,17 @@ import ThemeToggleButton from './theme-toggle-button'
 const Navbar = props => {
   // const { path } = props
 
+  const navbarItems = [
+    {
+      title: '3d w CSS',
+      href: 'css'
+    },
+    {
+      title: '3d w ThreeJS',
+      href: 'spline'
+    }
+  ]
+
   return (
     <Box
       position="fixed"
@@ -71,11 +82,12 @@ const Navbar = props => {
           flexGrow={1}
           mt={{ base: 4, md: 0 }}
         >
-          <LinkItem href="/css" path={path}>
-            CSS
-          </LinkItem>
+          {navbarItems.map(item => (
+            <LinkItem key={item.href} href={`/${item.href}`} path={path}>
+              {item.title}
+            </LinkItem>
+          ))}
         </Stack> */}
-
         <Box flex={1} align="right">
           <ThemeToggleButton />
 
@@ -88,16 +100,11 @@ const Navbar = props => {
                 aria-label="Options"
               />
               <MenuList>
-                <NextLink href="/css" passHref>
-                  <MenuItem as={Link}>CSS Practice</MenuItem>
-                </NextLink>
-
-                {/* <MenuItem
-                  as={Link}
-                  href="https://github.com/craftzdog/craftzdog-homepage"
-                >
-                  View Source
-                </MenuItem> */}
+                {navbarItems.map(item => (
+                  <NextLink key={item.href} href={`/${item.href}`} passHref>
+                    <MenuItem as={Link}>{item.title}</MenuItem>
+                  </NextLink>
+                ))}
               </MenuList>
             </Menu>
           </Box>
