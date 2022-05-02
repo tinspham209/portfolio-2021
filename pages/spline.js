@@ -16,6 +16,8 @@ import thumbIslandHouse from '../public/images/spline/island-house.webp'
 import thumbMacbookPro from '../public/images/spline/macbook-pro.webp'
 import thumbNintendoSwitch from '../public/images/spline/nintendo-switch.png'
 import thumbCalculator from '../public/images/spline/calculator.webp'
+import thumbSpotify from '../public/images/spline/spotify.webp'
+import thumbClockDigital from '../public/images/spline/clock-digital.webp'
 
 const Title = 'Spline Practice'
 
@@ -40,6 +42,16 @@ const Spline = () => {
       id: 'calculator',
       title: 'Calculator',
       thumbnail: thumbCalculator
+    },
+    {
+      id: 'spotify',
+      title: 'Spotify',
+      thumbnail: thumbSpotify
+    },
+    {
+      id: 'clock-digital',
+      title: 'Clock Digital',
+      thumbnail: thumbClockDigital
     }
   ]
 

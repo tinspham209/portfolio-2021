@@ -7,7 +7,7 @@ import dynamic from 'next/dynamic'
 
 export const SplineWrapper = styled.div(props => ({
   width: props.isMobile ? '300px !important' : '485px !important',
-  height: props.isMobile ? '300px !important' : '100% !important',
+  height: props.isMobile ? '300px !important' : '485px !important',
   overflow: 'hidden',
   backgroundColor: props.backgroundColor ? props.backgroundColor : '#A6D5E9',
   borderRadius: '8px',
