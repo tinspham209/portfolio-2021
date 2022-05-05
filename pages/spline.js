@@ -18,6 +18,7 @@ import thumbNintendoSwitch from '../public/images/spline/nintendo-switch.png'
 import thumbCalculator from '../public/images/spline/calculator.webp'
 import thumbSpotify from '../public/images/spline/spotify.webp'
 import thumbClockDigital from '../public/images/spline/clock-digital.webp'
+import thumbKeyboard from '../public/images/spline/keyboard.webp'
 
 const Title = 'Spline Practice'
 
@@ -52,6 +53,11 @@ const Spline = () => {
       id: 'clock-digital',
       title: 'Clock Digital',
       thumbnail: thumbClockDigital
+    },
+    {
+      id: 'key-board',
+      title: 'Keyboard',
+      thumbnail: thumbKeyboard
     }
   ]
 
