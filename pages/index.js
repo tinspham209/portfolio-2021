@@ -144,6 +144,19 @@ const Home = () => {
 
         <Section delay={0.3}>
           <Heading as="h3" variant="section-title">
+            Personal Projects
+          </Heading>
+          <SimpleGrid columns={[1, 1, 2]} gap={6}>
+            <NextLink href="/personal-projects" passHref>
+              <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
+                View detail
+              </Button>
+            </NextLink>
+          </SimpleGrid>
+        </Section>
+
+        <Section delay={0.3}>
+          <Heading as="h3" variant="section-title">
             Practices
           </Heading>
           <SimpleGrid columns={[1, 1, 2]} gap={6}>

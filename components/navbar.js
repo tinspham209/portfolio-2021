@@ -47,6 +47,10 @@ const Navbar = props => {
     {
       title: '3d w ThreeJS',
       href: 'spline'
+    },
+    {
+      title: 'Personal Projects',
+      href: 'personal-projects'
     }
   ]
 
