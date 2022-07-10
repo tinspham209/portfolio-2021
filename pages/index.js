@@ -122,12 +122,20 @@ const Home = () => {
           </BioSection>
           <BioSection>
             <BioYear>10 - 2021</BioYear>
+            {isMobile && <br />}
+            Junior Software Engineering at{' '}
+            <Link href="https://datahouse.asia" target="_blank">
+              Datahouse Asia
+            </Link>
+          </BioSection>
+          <BioSection>
+            <BioYear>07 - 2022</BioYear>
             &nbsp;
           </BioSection>
           <BioSection>
             <BioYear>&nbsp;&nbsp;&nbsp;&nbsp;to now</BioYear>
             {isMobile && <br />}
-            Software Engineering at {isMobile && <br />}
+            Middle Software Engineering at{' '}
             <Link href="https://datahouse.asia" target="_blank">
               Datahouse Asia
             </Link>
