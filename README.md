@@ -47,6 +47,10 @@ npm run dev
 
 ## Deploy:
 
+- CI:
+  - push commit to branch `master`
+
+- Manual:
 ```
 firebase init
   - select public folder is out
