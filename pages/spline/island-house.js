@@ -4,6 +4,7 @@ import { Title } from '../../components/css'
 import P from '../../components/paragraph'
 import styled from '@emotion/styled'
 import dynamic from 'next/dynamic'
+import { Seo } from '../../components/seo'
 
 export const SplineWrapper = styled.div(props => ({
   width: props.isMobile ? '300px !important' : '485px !important',
@@ -49,6 +50,14 @@ const IslandHouse = () => {
 
   return (
     <Layout title="island-house">
+      <Seo
+        data={{
+          title: 'Island House - Spline - Tins Pham Portfolio',
+          description: `Island House with Spline`,
+          url: 'https://tinspham.dev/spline/island-house/',
+          thumbnailUrl: `https://firebasestorage.googleapis.com/v0/b/tinspham-209.appspot.com/o/island-house.webp?alt=media&token=c001f042-52c3-4b1c-8951-6988ede310b5`
+        }}
+      />
       <Container>
         <Title href="spline" parentLink="Spline Practices">
           Island House <Badge>01-May-2022</Badge>

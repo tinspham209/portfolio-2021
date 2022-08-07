@@ -14,9 +14,19 @@ import { ChevronRightIcon } from '@chakra-ui/icons'
 
 import thumbAnimatedStairs from '../public/images/css/3d-animated-stairs.png'
 import thumbGlowingCube from '../public/images/css/3d-glowing-cube.png'
+import { Seo } from '../components/seo'
 
 const CSS = () => (
   <Layout title="css">
+    <Seo
+      data={{
+        title: 'CSS - Tins Pham Portfolio',
+        description: `Showcase of CSS practice - Design`,
+        url: 'https://tinspham.dev/css',
+        thumbnailUrl:
+          'https://firebasestorage.googleapis.com/v0/b/tinspham-209.appspot.com/o/card.png?alt=media&token=db1e220d-d880-4a0b-9372-7bc90ecf9c7e'
+      }}
+    />
     <Container>
       <Box>
         <NextLink href="/">

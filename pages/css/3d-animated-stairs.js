@@ -3,10 +3,19 @@ import Layout from '../../components/layouts/article'
 // import { Title, CSSImage } from '../../components/css'
 import { Title } from '../../components/css'
 import P from '../../components/paragraph'
+import { Seo } from '../../components/seo'
 
 const CSS = () => {
   return (
     <Layout title="3d-animated-stairs">
+      <Seo
+        data={{
+          title: '3D Animated Stairs - CSS - Tins Pham Portfolio',
+          description: `3D Animated Stairs with CSS Only`,
+          url: 'https://tinspham.dev/css/3d-animated-stairs/',
+          thumbnailUrl: `https://firebasestorage.googleapis.com/v0/b/tinspham-209.appspot.com/o/3d-animated-stairs.png?alt=media&token=50cfb7ab-aef4-4b7b-8e08-2df9d26f31ef`
+        }}
+      />
       <Container>
         <Title>
           3D Animated Stairs <Badge>04-Dec-2021</Badge>

@@ -9,12 +9,21 @@ import {
   Spline,
   SplineWrapper
 } from './island-house'
+import { Seo } from '../../components/seo'
 
 const Calculator = () => {
   const [isMobile] = useMediaQuery(['(max-width: 600px)'])
 
   return (
     <Layout title="calculator">
+      <Seo
+        data={{
+          title: 'Calculator - Spline - Tins Pham Portfolio',
+          description: `Calculator with Spline`,
+          url: 'https://tinspham.dev/spline/calculator/',
+          thumbnailUrl: `https://firebasestorage.googleapis.com/v0/b/tinspham-209.appspot.com/o/calculator.webp?alt=media&token=120ac9b0-4fb6-40ca-a6f0-48d0a06eb34a`
+        }}
+      />
       <Container>
         <Title href="spline" parentLink="Spline Practices">
           Calculator <Badge>02-May-2022</Badge>

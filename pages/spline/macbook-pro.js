@@ -8,11 +8,20 @@ import {
   Spline,
   SplineWrapper
 } from './island-house'
+import { Seo } from '../../components/seo'
 
 const MacbookPro = () => {
   const [isMobile] = useMediaQuery(['(max-width: 600px)'])
   return (
     <Layout title="macbook-pro">
+      <Seo
+        data={{
+          title: 'Macbook Pro - Spline - Tins Pham Portfolio',
+          description: `Macbook Pro with Spline`,
+          url: 'https://tinspham.dev/spline/macbook-pro/',
+          thumbnailUrl: `https://firebasestorage.googleapis.com/v0/b/tinspham-209.appspot.com/o/macbook-pro.webp?alt=media&token=60deb36c-7e35-46a3-84a3-a68f7e80f9ef`
+        }}
+      />
       <Container>
         <Title href="spline" parentLink="Spline Practices">
           Macbook Pro <Badge>02-May-2022</Badge>

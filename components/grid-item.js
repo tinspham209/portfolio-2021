@@ -54,7 +54,10 @@ export const ProjectsGridItem = ({ children, title, thumbnail, href }) => {
             src={thumbnail}
             alt={title}
             className="grid-item-thumbnail"
+            width={200}
+            height={200}
             placeholder="blur"
+            blurDataURL={thumbnail}
             loading="lazy"
           />
           <a target="_blank" rel="noopener noreferrer" href={`${href}`}>

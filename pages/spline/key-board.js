@@ -8,12 +8,21 @@ import {
   Spline,
   SplineWrapper
 } from './island-house'
+import { Seo } from '../../components/seo'
 
 const KeyBoard = () => {
   const [isMobile] = useMediaQuery(['(max-width: 600px)'])
 
   return (
     <Layout title="key-board">
+      <Seo
+        data={{
+          title: 'Keyboard - Spline - Tins Pham Portfolio',
+          description: `Keyboard with Spline`,
+          url: 'https://tinspham.dev/spline/key-board/',
+          thumbnailUrl: `https://firebasestorage.googleapis.com/v0/b/tinspham-209.appspot.com/o/keyboard.webp?alt=media&token=869eb37c-0539-40f7-aad9-ba678b441e52`
+        }}
+      />
       <Container>
         <Title href="spline" parentLink="Spline Practices">
           Keyboard <Badge>05-May-2022</Badge>

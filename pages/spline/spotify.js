@@ -9,12 +9,21 @@ import {
   Spline,
   SplineWrapper
 } from './island-house'
+import { Seo } from '../../components/seo'
 
 const Spotify = () => {
   const [isMobile] = useMediaQuery(['(max-width: 600px)'])
 
   return (
     <Layout title="spotify">
+      <Seo
+        data={{
+          title: 'Spotify - Spline - Tins Pham Portfolio',
+          description: `Spotify with Spline`,
+          url: 'https://tinspham.dev/spline/spotify/',
+          thumbnailUrl: `https://firebasestorage.googleapis.com/v0/b/tinspham-209.appspot.com/o/spotify.webp?alt=media&token=f2148c91-94a3-4958-8231-63b7d7efbd32`
+        }}
+      />
       <Container>
         <Title href="spline" parentLink="Spline Practices">
           Spotify <Badge>02-May-2022</Badge>

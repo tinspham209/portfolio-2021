@@ -9,12 +9,21 @@ import {
   Spline,
   SplineWrapper
 } from './island-house'
+import { Seo } from '../../components/seo'
 
 const NintendoSwitch = () => {
   const [isMobile] = useMediaQuery(['(max-width: 600px)'])
 
   return (
     <Layout title="nintendo-switch">
+      <Seo
+        data={{
+          title: 'Nitendo Switch - Spline - Tins Pham Portfolio',
+          description: `Nitendo Switch with Spline`,
+          url: 'https://tinspham.dev/spline/nintendo-switch/',
+          thumbnailUrl: `https://firebasestorage.googleapis.com/v0/b/tinspham-209.appspot.com/o/nintendo-switch.png?alt=media&token=de716e2f-9f8e-4d63-95aa-cd88572a646b`
+        }}
+      />
       <Container>
         <Title href="spline" parentLink="Spline Practices">
           Nitendo Switch <Badge>02-May-2022</Badge>

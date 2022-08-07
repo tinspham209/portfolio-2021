@@ -19,6 +19,7 @@ import thumbCalculator from '../public/images/spline/calculator.webp'
 import thumbSpotify from '../public/images/spline/spotify.webp'
 import thumbClockDigital from '../public/images/spline/clock-digital.webp'
 import thumbKeyboard from '../public/images/spline/keyboard.webp'
+import { Seo } from '../components/seo'
 
 const Title = 'Spline Practice'
 
@@ -63,6 +64,15 @@ const Spline = () => {
 
   return (
     <Layout title="spline">
+      <Seo
+        data={{
+          title: 'Spline - Tins Pham Portfolio',
+          description: `Showcase of Spline - Design`,
+          url: 'https://tinspham.dev/spline',
+          thumbnailUrl:
+            'https://firebasestorage.googleapis.com/v0/b/tinspham-209.appspot.com/o/card.png?alt=media&token=db1e220d-d880-4a0b-9372-7bc90ecf9c7e'
+        }}
+      />
       <Container>
         <Box>
           <NextLink href="/">

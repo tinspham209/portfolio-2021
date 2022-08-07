@@ -24,11 +24,21 @@ import {
   IoMail
 } from 'react-icons/io5'
 import NextLink from 'next/link'
+import { Seo } from '../components/seo'
 
 const Home = () => {
   const [isMobile] = useMediaQuery(['(max-width: 600px)'])
   return (
     <Layout>
+      <Seo
+        data={{
+          title: 'Tins Pham Portfolio - Homepage',
+          description: `Tins Pham's homepage`,
+          url: 'https://tinspham.dev',
+          thumbnailUrl:
+            'https://firebasestorage.googleapis.com/v0/b/tinspham-209.appspot.com/o/card.png?alt=media&token=db1e220d-d880-4a0b-9372-7bc90ecf9c7e'
+        }}
+      />
       <Container>
         <Box
           borderRadius="lg"

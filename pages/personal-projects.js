@@ -11,15 +11,26 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { ProjectsGridItem } from '../components/grid-item'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+// eslint-disable-next-line no-unused-vars
 import thumbNoorCf from '../public/images/personal-projects/noor-cafe.webp'
 import thumbTaptaponme from '../public/images/personal-projects/taptaponme.webp'
 import thumbKingstonedanang from '../public/images/personal-projects/kingstonedanang.webp'
 import thumbNoorKombucha from '../public/images/personal-projects/noor-kombucha.webp'
 import thumbCafesang from '../public/images/personal-projects/cafesang.webp'
 import thumbCovidTracker from '../public/images/personal-projects/covid-tracker.webp'
+import { Seo } from '../components/seo'
 
 const PersonalProjects = () => (
   <Layout title="personal-projects">
+    <Seo
+      data={{
+        title: 'Personal Projects - Tins Pham Portfolio',
+        description: `Showcase of Personal Projects`,
+        url: 'https://tinspham.dev/personal-projects/',
+        thumbnailUrl:
+          'https://firebasestorage.googleapis.com/v0/b/tinspham-209.appspot.com/o/card.png?alt=media&token=db1e220d-d880-4a0b-9372-7bc90ecf9c7e'
+      }}
+    />
     <Container>
       <Box>
         <NextLink href="/">
@@ -44,7 +55,7 @@ const PersonalProjects = () => (
           {
             id: 'noor-cafe',
             title: 'NOOR Coffee & Tea',
-            thumbnail: thumbNoorCf,
+            thumbnail: `https://firebasestorage.googleapis.com/v0/b/cafe-sang.appspot.com/o/a1b71e4b5da49efac7b5.webp?alt=media&token=c3b6be2f-8273-41a8-842e-d20d0fba1ba3`,
             href: `https://noor-cf.web.app/`
           },
           {

@@ -3,10 +3,19 @@ import Layout from '../../components/layouts/article'
 // import { Title, CSSImage } from '../../components/css'
 import { Title } from '../../components/css'
 import P from '../../components/paragraph'
+import { Seo } from '../../components/seo'
 
 const CSS = () => {
   return (
     <Layout title="3d-glowing-cube">
+      <Seo
+        data={{
+          title: '3D Glowing Cube - CSS - Tins Pham Portfolio',
+          description: `3D Glowing Cube with CSS Only`,
+          url: 'https://tinspham.dev/css/3d-animated-stairs/',
+          thumbnailUrl: `https://firebasestorage.googleapis.com/v0/b/tinspham-209.appspot.com/o/3d-glowing-cube.png?alt=media&token=de78bb88-9055-43a9-a70b-3f22854fda86`
+        }}
+      />
       <Container>
         <Title>
           3D Glowing Cube <Badge>05-Dec-2021</Badge>
