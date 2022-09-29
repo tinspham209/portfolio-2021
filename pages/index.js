@@ -177,7 +177,7 @@ const Home = () => {
             </NextLink>
             <NextLink href="/spline" passHref>
               <Button rightIcon={<ChevronRightIcon />} colorScheme="teal">
-                3D w ThreeJS
+                3D w Spline
               </Button>
             </NextLink>
           </SimpleGrid>

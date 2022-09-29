@@ -5,6 +5,5 @@ module.exports = {
     loader: 'imgix',
     path: 'https://tinspham.dev/',
     domains: ['firebasestorage.googleapis.com']
-  },
-  trailingSlash: true
+  }
 }

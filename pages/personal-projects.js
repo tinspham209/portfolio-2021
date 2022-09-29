@@ -11,8 +11,8 @@ import Layout from '../components/layouts/article'
 import Section from '../components/section'
 import { ProjectsGridItem } from '../components/grid-item'
 import { ChevronRightIcon } from '@chakra-ui/icons'
-// eslint-disable-next-line no-unused-vars
 import thumbNoorCf from '../public/images/personal-projects/noor-cafe.webp'
+import thumbInut from '../public/images/personal-projects/inut-design.webp'
 import thumbTaptaponme from '../public/images/personal-projects/taptaponme.webp'
 import thumbKingstonedanang from '../public/images/personal-projects/kingstonedanang.webp'
 import thumbNoorKombucha from '../public/images/personal-projects/noor-kombucha.webp'
@@ -53,9 +53,15 @@ const PersonalProjects = () => (
       <SimpleGrid columns={[1, 1, 2]} gap={6}>
         {[
           {
+            id: 'inut-design',
+            title: 'INUT Design',
+            thumbnail: thumbInut,
+            href: `https://inut-design.vercel.app/`
+          },
+          {
             id: 'noor-cafe',
             title: 'NOOR Coffee & Tea',
-            thumbnail: `https://firebasestorage.googleapis.com/v0/b/cafe-sang.appspot.com/o/a1b71e4b5da49efac7b5.webp?alt=media&token=c3b6be2f-8273-41a8-842e-d20d0fba1ba3`,
+            thumbnail: thumbNoorCf,
             href: `https://noor-cf.web.app/`
           },
           {

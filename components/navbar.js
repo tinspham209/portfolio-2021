@@ -41,11 +41,15 @@ const Navbar = props => {
 
   const navbarItems = [
     {
+      title: 'Contact',
+      href: 'contact'
+    },
+    {
       title: '3d w CSS',
       href: 'css'
     },
     {
-      title: '3d w ThreeJS',
+      title: '3d w Spline',
       href: 'spline'
     },
     {

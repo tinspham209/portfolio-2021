@@ -3,13 +3,14 @@
   "extends": "next",
   "rules": {
     "no-unused-vars": [
-      "error",
+      "warn",
       {
         "argsIgnorePattern": "^_",
         "varsIgnorePattern": "^_"
       }
     ],
     "@next/next/no-document-import-in-page": "off",
+    "react/no-unknown-property": ["error", { "ignore": ["jsx", "global"] }],
 
     "react/display-name": 0
   }
