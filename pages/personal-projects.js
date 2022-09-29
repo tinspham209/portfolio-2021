@@ -56,7 +56,7 @@ const PersonalProjects = () => (
             id: 'inut-design',
             title: 'INUT Design',
             thumbnail: thumbInut,
-            href: `https://inut-design.vercel.app/`
+            href: `https://inutdesign.com/`
           },
           {
             id: 'noor-cafe',
