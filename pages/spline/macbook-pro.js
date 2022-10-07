@@ -38,7 +38,7 @@ const MacbookPro = () => {
           backgroundColor="#322741"
         >
           <Spline
-            scene="https://prod.spline.design/YxbkzhRip8AUixwe/scene.spline"
+            scene="https://prod.spline.design/YxbkzhRip8AUixwe/scene.splinecode"
             onLoad={spline => {
               spline.setZoom(0.5)
             }}
