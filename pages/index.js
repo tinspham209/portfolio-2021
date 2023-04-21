@@ -64,12 +64,13 @@ const Home = () => {
             textAlign="center"
           >
             <Image
-              // borderColor="whiteAlpha.800"
+              borderColor="whiteAlpha.800"
               // borderWidth={2}
-              // borderStyle="solid"
+              borderStyle="solid"
+              borderBottomWidth={2}
               maxWidth="100px"
               display="inline-block"
-              borderRadius="full"
+              // borderRadius="full"
               src="/images/full-nguoi-edit.webp"
               alt="Profile image"
             />
@@ -123,32 +124,25 @@ const Home = () => {
             </Link>
           </BioSection>
           <BioSection>
-            <BioYear>07 - 2021</BioYear>
-            {isMobile && <br />}
-            Software Engineering Intern at{' '}
-            <Link href="https://datahouse.asia" target="_blank">
-              Datahouse Asia
-            </Link>
-          </BioSection>
-          <BioSection>
-            <BioYear>10 - 2021</BioYear>
-            {isMobile && <br />}
-            Junior Software Engineering at{' '}
-            <Link href="https://datahouse.asia" target="_blank">
-              Datahouse Asia
-            </Link>
-          </BioSection>
-          <BioSection>
-            <BioYear>07 - 2022</BioYear>
+            <BioYear>07 - 2021 to 03 - 2023</BioYear>
             &nbsp;
           </BioSection>
           <BioSection>
-            <BioYear>&nbsp;&nbsp;&nbsp;&nbsp;to now</BioYear>
-            {isMobile && <br />}
-            Middle Software Engineering at{' '}
+            <BioYear>
+              {Array.from({ length: isMobile ? 9 : 16 }).map(() => {
+                return <>&nbsp;</>
+              })}
+            </BioYear>
+            Software Engineering at{' '}
             <Link href="https://datahouse.asia" target="_blank">
               Datahouse Asia
             </Link>
+          </BioSection>
+
+          <BioSection>
+            <BioYear>04 - 2023</BioYear>
+            {isMobile && <br />}
+            Freelancer Web Developer
           </BioSection>
         </Section>
 

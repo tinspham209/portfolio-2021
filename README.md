@@ -31,6 +31,9 @@ $PROJECT_ROOT
 ```
 npm install
 
+//On Powershell
+$env:NODE_OPTIONS = "--openssl-legacy-provider"
+
 npm run dev
 ```
 
@@ -60,3 +63,6 @@ npm run build
 npm run export
 firebase deploy
 ```
+
+
+

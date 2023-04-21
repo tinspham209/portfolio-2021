@@ -46,12 +46,13 @@ const Home = () => {
             textAlign="center"
           >
             <Image
-              // borderColor="whiteAlpha.800"
+              borderColor="whiteAlpha.800"
               // borderWidth={2}
-              // borderStyle="solid"
+              borderStyle="solid"
+              borderBottomWidth={2}
               maxWidth="100px"
               display="inline-block"
-              borderRadius="full"
+              // borderRadius="full"
               src="/images/full-nguoi-edit.webp"
               alt="Profile image"
             />
