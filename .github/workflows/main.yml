@@ -28,7 +28,7 @@ jobs:
         run: npm run build && npm run export
 
       - name: Deploy Preview
-        run: firebase hosting:channel:deploy portfolio-2021
+        run: firebase hosting:channel:deploy portfolio-2021 --token ${{ secrets.FIREBASE_TOKEN }}
 
       - name: Deploy
         run: firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
