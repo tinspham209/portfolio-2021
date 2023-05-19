@@ -4,6 +4,7 @@
   "description": "Tins Pham's website",
   "scripts": {
     "dev": "next dev -H 0.0.0.0",
+    "postinstall": "export NODE_OPTIONS=--openssl-legacy-provider && set NODE_OPTIONS=--openssl-legacy-provider",
     "build": "next build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
     "start": "next start",
