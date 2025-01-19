@@ -115,16 +115,9 @@ const Home = () => {
           <Heading as="h3" variant="section-title">
             Work Experience
           </Heading>
+
           <BioSection>
-            <BioYear>05 - 2021</BioYear>
-            {isMobile && <br />}
-            Tech-Startup at{' '}
-            <Link href="https://taptapon.me" target="_blank">
-              TapTapOn.Me
-            </Link>
-          </BioSection>
-          <BioSection>
-            <BioYear>07 - 2021 to 03 - 2023</BioYear>
+            <BioYear>07 - 2021 to Present</BioYear>
             &nbsp;
           </BioSection>
           <BioSection>
@@ -134,8 +127,8 @@ const Home = () => {
               })}
             </BioYear>
             Software Engineering at{' '}
-            <Link href="https://datahouse.asia" target="_blank">
-              Datahouse Asia
+            <Link href="https://datahouse.com" target="_blank">
+              DataHouse Asia
             </Link>
           </BioSection>
 
